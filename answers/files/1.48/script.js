@@ -1,20 +1,26 @@
+setLeftOperand('2');
+setRightOperand('2');
+setOperator('+');
+
+setLeftOperand(setResult('') + '*' + '4');
+
+
 function onLeftOperandChange(value) {
-  console.log('onLeftOperandChange', value)
 }
 
 function onRightOperandChange(value) {
-  console.log('onRightOperandChange', value)
 }
 
 function onOperatorChange(value) {
-  console.log('onOperatorChange', value)
 }
 
 function onSubmit () {
-  console.log('onSubmit')
+  setResult(4);
+  setExpression((setLeftOperand('')) + (setOperator('')) + (setRightOperand('')));
 }
 
 function onClear () {
-  console.log('onClear')
 }
+
+
 

@@ -47,7 +47,7 @@ function addEvents () {
     setExpression('');
     setLeftOperand('');
     setRightOperand('');
-    setOperator(ADDITION);
+    setOperator('ADDITION');
     setResult('');
 
     previousResultsElement.innerHTML = '';
@@ -79,12 +79,12 @@ function setResult (value) {
   previousResultsElement.innerHTML = `
     ${previousResultsElement.innerHTML}
     ${
-    createResultHtml(
-      leftOperandElement.value,
-      rightOperandElement.value,
-      operatorElement.value,
-      value
-    )
+      createResultHtml(
+          leftOperandElement.value,
+          rightOperandElement.value,
+          operatorElement.value,
+          value
+      )
   }
   `
   setLeftOperand(value);
@@ -104,15 +104,11 @@ function createResultHtml (leftOperandValue, rightOperandValue, operatorValue, r
   return `
   <div style="margin: 10px 0">
     <input disabled value="${leftOperandValue}">
-
     <select disabled>
       ${selectedOptionHtml}
     </select>
-
     <input disabled value="${rightOperandValue}">
-
     <button disabled>=</button>
-
     <span>${resultValue}</span>
   </div>
   `;
